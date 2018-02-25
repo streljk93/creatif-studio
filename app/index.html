@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="jk_site" ng-cloak>
+<!-- <body> -->
+  <div class="jbg-accent fixed-top">
+    <nav class="container navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand text-uppercase" style="font-family: Russo One;" href="#">
+        Creatif Studio
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation" style="border: 2px solid white;">
+        <i class="fa fa-bars"></i>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+      <div class="collapse navbar-collapse flex justify-content-end" id="topMenu">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#main">
+            <span data-toggle="collapse" data-target=".navbar-collapse.show">
+              Главная
+            </span>
+            <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-item nav-link active" href="#aboutus">
+            <span data-toggle="collapse" data-target=".navbar-collapse.show">О нас</span>
+          </a>
+          <a class="nav-item nav-link active" href="#services">
+            <span data-toggle="collapse" data-target=".navbar-collapse.show">Услуги</span>
+          </a>
+          <a class="nav-item nav-link active" href="#price">
+            <span data-toggle="collapse" data-target=".navbar-collapse.show">Прайс</span>
+          </a>
+          <a class="nav-item nav-link active" href="#works">
+            <span data-toggle="collapse" data-target=".navbar-collapse.show">Работы</span>
+          </a>
+          <a class="nav-item nav-link active" href="#contacts">
+            <span data-toggle="collapse" data-target=".navbar-collapse.show">Контакты</span>
+          </a>
+          <div class="nav-item">
+            <a href="#feedback">
+              <button class="btn btn-secondary" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <i class="fa fa-comments-o"></i>
+                Запись онлайн
+              </button>
+            </a>
+          </div>
+        </div>  
+      </div>
+    </nav>  
+  </div>
+
+  <div style="padding-top: 56px; margin-top: -56px;" id="main"></div>
+  <header class="jheader" style="background-image: url(img/header.jpg);">
+    <div class="jheader__wrap container">
+      <div class="jheader__left">
+        <div class="jheader__title">Мы <br /> создаем <br /> красоту</div>
+        <div class="jheader__subtitle">
+          Действует бонусная программа *<br />
+          Информацию по бонусам смотрите в своем личном кабинете или узнайте у оператора 8 (952) 438 41 98
+        </div>
+      </div>
+      <div class="jheader__right"></div>
+    </div>
+    <div ng-controller="PromotionsController">
+      <slick-promotion class="js-promotion-top">
+
+        <div class="jpromotions__item" ng-repeat="(key, promotion) in promotionList">
+          <div class="jpromotion">
+            <div class="jpromotion__wrap">
+              <div class="jpromotion__header">
+                <div class="jpromotion__image">
+                  <img src="img/header2.jpg" class="img-fluid">
+                  <div class="jpromotion__image-label">
+                    акция
+                  </div>
+                  <div class="jcounter jpromotion__counter">
+                    <span class="jcounter__item jcounter__days-1"></span>
+                    <span class="jcounter__item jcounter__days-2"></span>
+                    <span>&nbsp;&nbsp;</span>
+                    <span class="jcounter__item jcounter__hours-1"></span>
+                    <span class="jcounter__item jcounter__hours-2"></span>
+                    <span>:</span>
+                    <span class="jcounter__item jcounter__minutes-1"></span>
+                    <span class="jcounter__item jcounter__minutes-2"></span>
+                    <span>:</span>
+                    <span class="jcounter__item jcounter__seconds-1"></span>
+                    <span class="jcounter__item jcounter__seconds-2"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="jpromotion__content">
+                <div class="jpromotion__title">
+                  {{promotion.promotion_name}}
+                </div>
+                <div class="jpromotion__subtitle">
+                  {{promotion.promotion_description}}
+                </div>
+              </div>
+              <div class="jpromotion__footer">
+                <a href="#feedback" class="jpromotion__button btn btn-danger">
+                  записаться <i class="fa fa-chevron-right"></i>
+                </a>
+              </div>  
+            </div>
+          </div>
+        </div>
+        
+      </slick-promotion>
+    </div>
+  </header>
+
+  <div style="padding-top: 56px; margin-top: -56px;" id="aboutus"></div>
+  <div class="jblock jbg-light">
+    <div class="container">
+      <div class="jblock__wrap row">
+        <div class="jblock__title col-md-5">
+          <img src="img/example.gif" class="img-fluid">
+          немного о нашем салоне
+        </div>
+        <div class="jblock__content col-md-7">
+          <p>Комфортная и домашняя обстановка Переступая порог салона красоты, Вы слышите приятную музыку, чувствуете нежные ароматы, попадаете в атмосферу эстетики и гармонии. И при этом Вы, несомненно, будете чувствовать себя как дома! Дорогие и известные салоны красоты в Москве предлагают различные услуги. Но только в нашей студии уникальная уютная атмосфера вкупе с мастерством лучших специалистов позволяет получать истинное наслаждение от процедур. Мы дарим не только красоту, но и ощущение гармонии, идеального баланса с собой. Ведь человек тогда прекрасен, когда мир царит в его сердце.</p>
+          <p>Мастера, которые влюблены в свое дело Мастера известного салона красоты «CREA`TIF» постоянно повышают квалификацию на престижных семинарах, мастер-классах, проводимых профессиональными стилистами в Белгороде и за рубежом. Имея за плечами многолетний опыт, любой из мастеров подберет уникальный имидж, который наиболее выгодно подчеркнет Ваши достоинства.</p>
+          <p>Косметика, зарекомендовавшая себя на мировом рынке Все специалисты и мастера нашего престижного салона красоты работают на косметике элитных марок: Alterna, Kydra, Joico, Secret Professional, La Ric, Leighton Denny, Decleor, Pharmaskincare, HydroPeptide, Heliabrine. Успешно пройдя клинические исследования, вся продукция была одобрена экспертами мирового уровня. Мы всегда предлагаем Вам только самое лучшее, поэтому всю косметику сначала пробуем на себе.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top: 56px; margin-top: -56px;" id="services"></div>
+  <div class="jblock" ng-controller="ServicesController"> 
+    <div class="container">
+      <div class="jblock__wrap">
+        <div class="jblock__content">
+          <div class="jwrapper-flex" style="margin-left: -15px; margin-right: -15px;">
+
+            <div class="jwrapper-flex__item-25" ng-repeat="service in serviceList">
+              <div class="jservice">
+                <div class="jservice__wrap">
+                  <img src="img/header3.jpg" class="jservice__img">
+                  <div class="jservice__title">{{service.title}}</div>
+                  <div class="jservice__info">
+                    10 <i class="fa fa-eye"></i>
+                  </div>
+                  <a data-toggle="modal" data-target="#service-{{service.id}}" class="jservice__hover">
+                    <i class="fa fa-eye"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="modal fade" id="service-{{service.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header jbg-accent text-white">
+                      <h5 class="modal-title" id="exampleModalLabel" style="font-family: Russo One; text-transform: uppercase;">
+                        {{service.title}}
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div style="overflow: hidden;" ng-bind-html="trustAsHtml(service.content)"></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger text-white text-uppercase" data-dismiss="modal" style="font-family: Russo One; font-size: .9rem;">Закрыть</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top: 56px; margin-top: -56px;" id="price"></div>
+  <div class="jblock" style="background-image: url(../img/salon.jpg); background-position: center center; background-size: cover; background-attachment: fixed;">
+    <div style="background-color: rgba(0,0,0,.63);">
+      <div class="container">
+        <div class="jblock__wrap" style="height: 600px;">
+          <div class="jblock__content text-white d-flex flex-row justify-content-center align-items-center h-100 w-100">
+            <a href="img/price.pdf" target="_blank">
+              <button class="btn btn-danger text-white" style="border-width: 3px; background: transparent; font-family: Russo One; text-transform: uppercase; padding: 15px 30px; font-size: 1.1rem;">
+                Открыть прайс
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top: 56px; margin-top: -56px;" id="works"></div>
+  <div class="jblock jbg-light" ng-controller="MediaController">
+    <div class="container">
+      <div class="jblock__wrap">
+        <div class="jblock__title">
+          Наши работы
+        </div>
+        <div class="jblock__content">
+          <div class="jmedia">
+
+            <div class="jmedia__item" ng-repeat="media in media.sporthall.stack track by $index">
+              <div class="jmedia__wrap">
+                <div class="jmedia__image" style="background-image: url({{media.media_url}});" ng-click="openPortfolioImage(media)">
+                  <i class="fa fa-search-plus jmedia__icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-100" style="padding: 10px 5px 0 5px;">
+              <button class="btn btn-info w-100 text-uppercase" ng-click="addImage()">
+                <i class="fa fa-instagram"></i>
+                <span style="font-size: .9rem;">Загрузить остальные ...</span>
+              </button>
+            </div>
+            <div class="jmedia__backdrop"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top: 56px; margin-top: -56px;" id="contacts"></div>
+  <div class="jblock jblock_theme-primary">
+    <div class="jblock__wrap container">
+      <div class="jblock__title">Контакты</div>
+      <div class="jblock__content">
+        <div class="jfooter row">
+
+          <div class="jfooter__contact col-md-6">
+            <div class="jcontact h-100 text-white">
+              <div class="jcontact__item">
+                <div class="jcontact__element">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <div class="jcontact__element">
+                  32-90-86
+                </div>
+              </div>
+              <div class="jcontact__item">
+                <div class="jcontact__element">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <div class="jcontact__element">
+                  8 (952) 438 41 98
+                </div>
+              </div>
+              <div class="jcontact__item">
+                <div class="jcontact__element">
+                  <i class="fa fa-map"></i>
+                </div>
+                <div class="jcontact__element">
+                  CREA`TIF, Народный б-р, 87, Белгород, Белгородская обл., Россия
+                </div>
+              </div>  
+            </div>
+          </div>
+
+          <div class="jfeedback jfooter__feedback col-md-6 mt-4 mt-md-0" ng-controller="FeedBackController">
+            <div class="jfeedback__row" style="padding-top: 78px; margin-top: -78px;" id="feedback">
+              <input type="text" class="jfeedback__input" placeholder="Ваше имя..." ng-model="feedback.name">
+                <input type="text" class="jfeedback__input" placeholder="Ваш e-mail..." ng-model="feedback.email">
+              </div>
+              <div class="jfeedback__row">
+                <input type="text" class="jfeedback__input" placeholder="Телефон..." ng-model="feedback.phone">
+              </div>
+              <div class="jfeedback__row">
+                <textarea class="jfeedback__input" rows="4" placeholder="Ваше сообщение..." ng-model="feedback.message"></textarea>
+              </div>
+              <div class="jfeedback__row">
+                <button class="btn btn-secondary w-100 text-uppercase" style="font-family: Russo One" ng-click="sendFeedBack()">
+                  <i class="fa fa-envelope"></i>
+                  Отправить
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map">
+    <iframe
+      width="100%"
+      height="500px"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJu7E-H_dqJkERwOuMBM3mG20&key=AIzaSyAgq8uGuet6IyDEfMtzL9HCXnflugbISHE" allowfullscreen>
+    </iframe>
+  </div>
+
+  <footer class="jblock bg-danger">
+    <div class="jblock__wrap container">
+      <div class="jblock__content">
+        <div class="text-center text-uppercase text-white" style="font-family: Russo One;">
+          веб. студия <a href="http://strel-jk.ru/" target="_blank" style="text-decoration: none !important; color: #FCE38A !important;">strel-jk.ru</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="shadow"></div>
+
+  <script type="text/javascript" src="js/libs.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+</body>
+</html>

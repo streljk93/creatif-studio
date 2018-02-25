@@ -1,0 +1,27 @@
+.jsidenav
+	height: 100%
+	width: 0
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	background-color: $jcolor-light
+	overflow: hidden
+	transition: 0.5s
+	box-shadow: 0 0 10px rgba(0,0,0,0.4)
+	&__nav
+		position: static
+		height: 62px
+		box-shadow: none
+	&__items
+		padding-top: 10px
+		display: flex
+		flex-direction: column
+	&__item
+		padding: 13px 15px
+		font-size: 17px
+		color: theme-color("dark")
+		&:hover
+			background: $jcolor-primary
+			color: $jcolor-white
+			text-decoration: none

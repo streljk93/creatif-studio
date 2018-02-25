@@ -1,0 +1,117 @@
+// vars
+$jcolor-primary: #95E1D3
+$jcolor-accent: #F38181
+$jcolor-secondary: #FCE38A 
+$jcolor-light: #EAFFD0
+$jcolor-white: #FCFEFE
+
+@import "libs"
+@import "fonts"
+
+// @import "../blocks/jpage"
+@import "../blocks/jheader"
+@import "../blocks/jwrapper-flex"
+@import "../blocks/jpromotion"
+@import "../blocks/jcounter/jcounter"
+@import "../blocks/jblock"
+@import "../blocks/jservice"
+@import "../blocks/jmedia/jmedia"
+@import "../blocks/jfooter"
+@import "../blocks/jcontact"
+@import "../blocks/jfeedback"
+// @import "../blocks/jnav/jnav"
+// @import "../blocks/jsidenav/jsidenav"
+// @import "../blocks/jmenu"
+// @import "../blocks/jinput"
+// @import "../blocks/jprice-card"
+// @import "../blocks/jportfolio"
+// @import "../blocks/jportfolio-block"
+// @import "../blocks/jicon"
+// @import "../blocks/jcard"
+// @import "../blocks/jcarousel"
+// @import "../blocks/jcollapse"
+// @import "../blocks/jblog"
+// @import "../blocks/jpost"
+// @import "../blocks/jpagination"
+// @import "../blocks/jform"
+// @import "../blocks/jpage-post"
+// @import "../blocks/jblock-of-post"
+// @import "../blocks/jsidebar"
+// @import "../blocks/jblock-of-sidebar"
+
+*:focus
+	outline: none
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+[ng\:cloak], [ng-cloak], .ng-cloak
+	display: none !important
+
+.jbg-primary
+	background: $jcolor-primary
+.jbg-accent
+	background: $jcolor-accent
+.jbg-secondary
+	background: $jcolor-secondary
+.jbg-light
+	background: $jcolor-light
+.jbg-white
+	background: $jcolor-white
+
+.jtext-primary
+	color: $jcolor-primary
+.jtext-accent
+	color: $jcolor-accent
+.jtext-secondary
+	color: $jcolor-secondary
+.jtext-light
+	color: $jcolor-light
+.jtext-white
+	color: $jcolor-white
+
+@include media-breakpoint-down(xs)
+	.hidden-xs-down
+		display: none !important
+@include media-breakpoint-down(sm)
+	.hidden-sm-down
+		display: none !important
+@include media-breakpoint-down(md)
+	.hidden-md-down
+		display: none !important
+@include media-breakpoint-down(lg)	
+	.hidden-lg-down
+		display: none !important
+
+@include media-breakpoint-up(xs)
+	.hidden-xs-up
+		display: none !important
+@include media-breakpoint-up(sm)
+	.hidden-sm-up
+		display: none !important
+@include media-breakpoint-up(md)
+	.hidden-md-up
+		display: none !important
+@include media-breakpoint-up(lg)	
+	.hidden-lg-up
+		display: none !important

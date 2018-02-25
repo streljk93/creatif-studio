@@ -1,0 +1,54 @@
+.jcard
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+	&__wrap
+		box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	&__header
+		padding: 10px
+		height: 200px
+		background-size: cover
+		background-position: top center
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__title
+		text-transform: uppercase
+		font-size: $font-size-base + 0.5
+		font-family: Russo One
+		&:after
+			content: ''
+			display: block
+			height: 4px
+			width: 50%
+			background: white
+			margin-top: 10px
+	&__price
+		font-size: $font-size-base + 0.5
+	&__content
+		padding: 10px
+		background: white
+		color: black
+
+.jcard_theme-promotion
+	cursor: pointer
+	background: $white
+	color: $black
+	height: 200px
+	.jcard__wrap
+		box-shadow: none
+	&:hover
+		box-shadow: 0 0 15px black
+		.jcard__header
+			background: theme-color('danger')
+			color: $white
+	.jcard__header
+		height: auto
+	.jcard__title:after
+		height: 0px
+		margin-top: 0px
+	&-active
+		box-shadow: 0 0 15px black
+		.jcard__header
+			background: theme-color('danger')
+			color: $white		

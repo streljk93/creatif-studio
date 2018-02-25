@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JK - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div class="jsidenav">
+    <nav class="jnav jsidenav__nav">
+      <div class="jnav__wrap container">
+        <div class="jnav__logo">
+          <i class="fa fa-cube fa-2x mr-3"></i>
+          <span>jk web studio</span>
+        </div>
+      </div>
+    </nav>
+    <div class="jsidenav__items">
+      <a href="#" class="jsidenav__item">
+        <i class="fa fa-home mr-2"></i>
+        Главная
+      </a>
+      <a href="#" class="jsidenav__item">
+        <i class="fa fa-users mr-2"></i>
+        О нас
+      </a>
+      <a href="#" class="jsidenav__item">
+        <i class="fa fa-cogs mr-2"></i>
+        Стоимость
+      </a>
+      <a href="#" class="jsidenav__item">
+        <i class="fa fa-briefcase mr-2"></i>
+        Работы
+      </a>
+      <a href="#" class="jsidenav__item">
+        <i class="fa fa-envelope mr-2"></i>
+        Контакты
+      </a>
+    </div>
+  </div>
+  <div class="jpage">
+    <nav class="jnav">
+      <div class="jnav__wrap container">
+        <div class="jnav__logo">
+          <i class="fa fa-cube fa-2x hidden-md-down mr-3"></i>
+          <i class="fa fa-bars fa-2x hidden-lg-up mr-3" onclick="jsidenavInstance.toggle()"></i>
+          <span class="hidden-md-down">jk web studio</span>
+        </div>
+        <div class="jnav__menu">
+          <div class="jmenu">
+            <a href="#" class="jmenu__item hidden-md-down">Главаня</a>
+            <a href="#" class="jmenu__item hidden-md-down">О нас</a>
+            <a href="#" class="jmenu__item hidden-md-down">Стоимость</a>
+            <a href="#" class="jmenu__item hidden-md-down">Работы</a>
+            <a href="#" class="jmenu__item hidden-md-down">Контакты</a>
+            <button class="btn btn-danger text-white font-weight-bold ml-4">
+              <i class="fa fa-phone"></i>
+              <span class="hidden-md-down">8 (910) 386 45 65</span>
+            </button>
+            <button class="btn btn-info font-weight-bold ml-2 hidden-md-up">
+              <i class="fa fa-comment"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div style="height: 100vh;">
+      <div class="jnav-fix"></div>
+      <div style="padding-top: 15%;">
+        <div>
+          <div class="text-center" style="font-family: Russo One; font-size: 6rem;">
+            404
+          </div>
+          <div class="text-center text-uppercase pb-3" style="font-size: 2rem; color: #777;">
+            Оопс... Извините, мы не можем найти эту страницу!
+          </div>
+          <div class="text-center pb-5" style="font-size: 1.3rem; color: #777;">
+            Что то пошло не так или данной страницы не существует.
+          </div>
+          <div class="text-center">
+            <a href="#">
+              <button class="btn btn-primary text-white text-uppercase" style="font-size: .9rem;">
+                На главную страницу
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jblock jblock_theme-primary jpage__block" id="contact">
+      <div class="jblock__wrap container">
+        <div class="jblock__title">Контакты</div>
+        <div class="jblock__content">
+          <div class="jfooter row">
+
+            <div class="jfooter__contact col-md-6">
+              <div class="jcontact h-100">
+                <div class="jcontact__item">
+                  <div class="jcontact__element">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <div class="jcontact__element">
+                    strel.jk.93@gmail.com
+                  </div>
+                </div>
+                <div class="jcontact__item">
+                  <div class="jcontact__element">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <div class="jcontact__element">
+                    8 (910) 368 45 65
+                  </div>
+                </div>
+                <div class="jcontact__item">
+                  <div class="jcontact__element">
+                    <i class="fa fa-map"></i>
+                  </div>
+                  <div class="jcontact__element">
+                    JK STUDIO, ул. Константина Заслонова, 183, Белгород, Белгородская область, Россия
+                  </div>
+                </div>  
+              </div>
+            </div>
+
+            <div class="jfeedback jfooter__feedback col-md-6 mt-4 mt-md-0">
+              <div class="jfeedback__row">
+                <input type="text" class="jfeedback__input" placeholder="Ваше имя...">
+                <input type="text" class="jfeedback__input" placeholder="Ваш e-mail...">
+              </div>
+              <div class="jfeedback__row">
+                <input type="text" class="jfeedback__input" placeholder="Телефон...">
+              </div>
+              <div class="jfeedback__row">
+                <textarea class="jfeedback__input" rows="4" placeholder="Ваше сообщение..."></textarea>
+              </div>
+              <div class="jfeedback__row">
+                <button class="btn btn-info w-100">
+                  <i class="fa fa-envelope"></i>
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/libs.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+    window.sr = ScrollReveal({ reset: true });
+    sr.reveal('.jprice-card', {
+      duration: 900,
+      opacity: 0.1,
+    }, 100);
+  </script>
+</body>
+</html>

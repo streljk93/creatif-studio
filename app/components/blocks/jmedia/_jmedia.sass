@@ -1,0 +1,70 @@
+.jmedia
+	display: flex
+	flex-wrap: wrap
+	margin-left: -5px
+	margin-right: -5px
+	&__item
+		flex-basis: 25%
+		height: 250px
+	&__wrap
+		height: 100%
+		padding: 5px
+	&__image
+		border-radius: 3px
+		height: 100%
+		background-color: white
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		display: flex
+		flex-direction: column
+		justify-content: center
+		text-align: center
+		cursor: pointer
+	&__icon
+		color: rgba(255,255,255,0.6)
+		font-size: 4em
+		display: none
+	&__backdrop
+		background: rgba(0,0,0,0.6)
+		position: fixed
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		z-index: 2000
+		display: none
+	&_open
+		// padding: 6% 10px
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 2002
+		.jmedia__image
+			background-size: contain
+			background-color: transparent
+
+.shadow
+	position: fixed
+	top: 0
+	bottom: 0
+	height: 100%
+	width: 100%
+	background-color: rgba(0,0,0,0.7)
+	z-index: 2001
+	display: none
+	&_open
+		display: block
+
+@media only screen and (max-width: 992px)
+	.jmedia__item
+		flex-basis: 50%
+	.jmedia_open
+		padding: 10px 10px
+
+@media only screen and (max-width: 576px)
+	.jmedia__item
+		flex-basis: 100%
